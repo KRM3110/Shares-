@@ -30,7 +30,7 @@ public class ExpenseShareController {
     }
 
     @GetMapping("/expenses/{expenseId}/shares")
-    public List<ExpenseShare> getSharesByExpense(UUID expenseId){
+    public List<ExpenseShare> getSharesByExpense(@PathVariable UUID expenseId){
         return expenseShareService.getSharesByExpense(expenseId);
     }
 
